@@ -27,14 +27,14 @@
 }
 
 :root {
-	--background: #0a192f;
-	--header: linear-gradient(-45deg, #0047ab, #c2410c, #fbbf24);
-	--btn: #facc15;
-	--promo: rgba(250, 204, 21, 0.15);
-	--table: rgba(16, 32, 60, 0.9);
-	--white: #f0f9ff;
-	--black: #081221;
-	--title: #ffffff;
+	--background: #020617;
+	--header: linear-gradient(-45deg, #1e1b4bb4, #8b5cf6, #d946ef);
+	--btn: #a855f7;
+	--promo: rgba(168, 85, 247, 0.15);
+	--table: rgba(15, 23, 42, 0.9);
+	--white: #f8fafc;
+	--black: #020617;
+	--title: #f5f3ff;
 }
 
 * {
@@ -122,6 +122,8 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom-right-radius: 15px;
+	corner-bottom-right-shape: bevel;
 	background: var(--header);
 	backdrop-filter: blur(2px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -174,7 +176,8 @@ header img {
 	font-size: 1.2rem;
 	border: 1px solid var(--white);
 	color: var(--white);
-	border-radius: 18px;
+	border-bottom-right-radius: 15px;
+	corner-bottom-right-shape: bevel;
 	margin-right: 50px;
 }
 
@@ -184,15 +187,18 @@ header img {
 	background-color: var(--btn);
 	color: var(--title);
 	border: 2px solid var(--white);
-	border-radius: 18px;
+	border-bottom-right-radius: 15px;
+	corner-bottom-right-shape: bevel;
 	text-align: center;
 }
 
 .white-btn:hover,
 .green-btn:hover {
+	transition: all 0.2s ease;
 	background-color: var(--white);
 	color: var(--black);
 	box-shadow: 5px 3px 5px var(--table);
+	border-bottom-right-radius: 0;
 }
 
 .wraper {
@@ -208,7 +214,8 @@ header img {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	box-shadow: 0 0 15px var(--btn);
 	backdrop-filter: blur(5px);
-	border-radius: 5px;
+	border-bottom-right-radius: 15px;
+	corner-bottom-right-shape: bevel;
 	padding: 20px;
 	overflow: hidden;
 }
@@ -286,13 +293,14 @@ blockquote {
 }
 
 table thead th:first-child {
-	border-top-left-radius: 12px;
-	border-bottom-left-radius: 12px;
+	border-top-left-radius: 14px;
+	corner-shape: bevel;
 }
 
 table thead th:last-child {
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 14px;
+	corner-shape: bevel;
 }
 
 table thead th {
@@ -311,13 +319,14 @@ tr:nth-child(even) {
 }
 
 table tbody tr td:first-child {
-	border-top-left-radius: 12px;
-	border-bottom-left-radius: 12px;
+	border-top-left-radius: 14px;
+	corner-shape: bevel;
 }
 
 table tbody tr td:last-child {
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 14px;
+	corner-shape: bevel;
 }
 
 .flex {
@@ -457,7 +466,6 @@ footer a:hover {
 		padding: 6px 10px;
 		font-size: 0.9rem;
 		border: 1px solid var(--white);
-		border-radius: 10px;
 		margin-right: 10px;
 		text-align: center;
 	}
@@ -466,7 +474,6 @@ footer a:hover {
 		padding: 4px 8px;
 		font-size: 0.9rem;
 		background-color: var(--btn);
-		border-radius: 10px;
 		text-align: center;
 	}
 
@@ -489,7 +496,6 @@ footer a:hover {
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
-		border-radius: 18px 10% 18px 18px;
 	}
 
 	h1 {
